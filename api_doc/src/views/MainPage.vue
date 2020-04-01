@@ -19,12 +19,12 @@
                                 <div><img src="../assets/imgs/yuansfer_logo.png" alt="logo"/></div>
                             </el-col>
                             <el-col :span="10">
-                                <a href="http:www.baidu.com"><span>DOCS</span></a>
+                                <a href="http:www.baidu.com">DOCS</a>
                             </el-col>
                         </el-row>
                     </div>
                     <div>
-                        <el-input placeholder="search" v-model="search"
+                        <el-input placeholder="Search" v-model="search"
                                   prefix-icon="el-icon-search">
                         </el-input>
                     </div>
@@ -268,16 +268,15 @@
             color: #47A2FF;
             line-height: 74px;
             padding: 3px;
-            background: #47A2FF;
-            opacity: 0.1;
-            span{
-                color: #47A2FF;
-                opacity: 1.0;
-            }
+            background: rgba(71,162,255,0.1);
         }
         img{
             width:141px;
             padding: 20px 5px 20px 20px;
+        }
+        .el-input{
+            width: 83%;
+            margin-left: 20px;
         }
     }
 
