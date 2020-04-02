@@ -12,3 +12,36 @@ code{
 .show-code{
     padding-top: 50px;
 }
+h1{
+    padding: 30px 0;
+    color: #04080D;
+    font-size: 28px;
+    font-weight: normal;
+}
+h2{
+    color: #04080D;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 37px 0 20px 0;
+}
+h3{
+    padding: 30px 0 0 0;
+    color: #04080D;
+    font-size: 22px;
+    font-weight: normal;
+}
+.p-font{
+    color: #3C414D;
+    font-size: 14px;
+    padding: 0;
+    margin-top: 0;
+}
+.p-a{
+    color: #47A2FF;
+    font-size: 14px;
+    text-decoration: none;
+}
+.desc-area{
+    padding: 5px 15px 5px 20px;
+    text-align: left;
+}
