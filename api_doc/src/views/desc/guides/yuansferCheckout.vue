@@ -59,10 +59,10 @@
                     <div class="mark-box">
                         <table>
                             <tr>
-                                <td style="padding-right: 0;width: 26px">
+                                <td class="one-line-1td">
                                     <img src="../../../assets/imgs/tanhao.png" alt=""/>
                                 </td>
-                                <td style="padding-left: 0">
+                                <td class="one-line-2td">
                                     <div>
                                         Contact <span>Yuansfer Support</span> to also accept Visa, Mastercard, Discover, and Amex on Yuansfer Checkout.
                                     </div>
@@ -298,17 +298,17 @@
                     [
                         {
                             index:0,
-                            img: require('@/assets/imgs/guides/YuansferCheckout/WEB_Alipay_QRcode_1 Copy 2.svg'),
+                            img: require('@/assets/imgs/guides/YuansferCheckout/WEB_UnionPay_1.svg'),
                             stepDesc: '1. Customer selects UnionPay'
                         },
                         {
                             index:1,
-                            img: require('@/assets/imgs/guides/YuansferCheckout/Web_Alipay_2 Copy.svg'),
+                            img: require('@/assets/imgs/guides/YuansferCheckout/WEB_UnionPay_3.svg'),
                             stepDesc: '2. Customer enters card number on Yuansfer hosted page'
                         },
                         {
                             index:2,
-                            img: require('@/assets/imgs/guides/YuansferCheckout/Web_Alipay_3 Copy.svg'),
+                            img: require('@/assets/imgs/guides/YuansferCheckout/WEB_UnionPay_2.svg'),
                             stepDesc: '3. Customer authenticates payment'
                         },
                         {
