@@ -135,7 +135,7 @@
 </script>
 
 <style scoped lang="less">
-    @import "../../../assets/css/common.css";
+    @import "../../../assets/css/common.less";
     .modify /deep/ .el-tabs--card>.el-tabs__header {
         border-bottom: none;
     }

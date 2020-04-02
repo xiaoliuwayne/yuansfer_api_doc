@@ -34,6 +34,6 @@
 </script>
 
 <style scoped lang="less">
-    @import "../../../assets/css/common.css";
+    @import "../../../assets/css/common.less";
 
 </style>

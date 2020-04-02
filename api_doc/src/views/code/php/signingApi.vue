@@ -43,7 +43,7 @@
 </script>
 
 <style scoped lang="less">
-    @import "../../../assets/css/common.css";
+    @import "../../../assets/css/common.less";
     code{
         padding: 30px 0 0 10px;
         text-align: left;
