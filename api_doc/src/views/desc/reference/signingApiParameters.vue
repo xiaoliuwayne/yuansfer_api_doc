@@ -1,7 +1,7 @@
 <template>
     <div>
         <el-row class="row-gb">
-            <el-col :span="17" class="content-gb">
+            <el-col :span="leftWidth" class="content-gb">
                 <div>
                     <h3>Signing API parameters</h3>
                     <p>Signing the API parameters is a feature that allows you to secure your Yuansfer API calls, by using MD5 encryption and authenticated hash.
@@ -75,7 +75,7 @@
                     <p>MD5 hash value is b6bfd66531ae7c9499115c7480a2c8aa</p>
                 </div>
             </el-col>
-            <el-col :span="7">
+            <el-col :span="rightWidth">
                 <div class="show-code">
                     <signing-api-php v-show="curTab=='php'"></signing-api-php>
                     <signing-api-java v-show="curTab=='java'"></signing-api-java>
@@ -90,6 +90,7 @@
     import SigningApiPhp from '@/views/code/php/signingApi'
     import SigningApiGo from '@/views/code/go/signingApi'
     import SigningApiJava from '@/views/code/java/signingApi'
+    import {COL_WIDTH} from "@/assets/js/common";
 
     export default {
         name: "signingApiParameters",
@@ -106,9 +107,10 @@
         },
         data(){
             return{
-
+                leftWidth: COL_WIDTH.left,
+                rightWidth: COL_WIDTH.right,
             }
-        },
+        }
     }
 </script>
 

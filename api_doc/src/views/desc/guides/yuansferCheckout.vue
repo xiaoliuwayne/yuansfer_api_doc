@@ -1,7 +1,7 @@
 <template>
     <div class="enhance">
         <el-row class="row-gb">
-            <el-col :span="17" class="content-gb">
+            <el-col :span="leftWidth" class="content-gb">
                 <div class="desc-area">
                     <h2 id="title_yuansfer_checkout">Yuansfer Checkout</h2>
                     <p class="p-font">
@@ -138,7 +138,7 @@
                     </div>
                 </div>
             </el-col>
-            <el-col :span="7"></el-col>
+            <el-col :span="rightWidth"></el-col>
         </el-row>
         <el-dialog
                 width="30%"
@@ -185,11 +185,13 @@
 </template>
 
 <script>
-    import validateNull from '@/assets/js/common'
+    import {validateNull, COL_WIDTH} from '@/assets/js/common'
     export default {
         name: "yuansferCheckout",
         data(){
             return{
+                leftWidth: COL_WIDTH.left,
+                rightWidth: COL_WIDTH.right,
                 curDialog: false,
                 disabled: false,
                 form: {

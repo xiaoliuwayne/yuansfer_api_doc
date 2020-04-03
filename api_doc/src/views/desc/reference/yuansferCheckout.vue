@@ -1,13 +1,13 @@
 <template>
     <div>
         <el-row class="row-gb">
-            <el-col :span="17" class="content-gb">
+            <el-col :span="leftWidth" class="content-gb">
                 <div>
                     <h3>Online Payments API</h3>
                     <p>Use the Online Payments API to easily and securely accept online payments. The Yuansfer secure payment interface provides online payment services, including China UnionPay, Alipay and WeChat Pay and credit card.
                     </p>
                     <h5>Online payment workflow</h5>
-                    <img src="../../../assets/imgs/sflow-en.png" alt=""/>
+                    <img src="../../../assets/imgs/reference/sflow-en.png" alt=""/>
                     <ol>
                         <li>The Merchant's system submits the order to the Yuansfer system when a customer places an order.</li>
                         <li>The Yuansfer system checks if the request is valid.</li>
@@ -23,19 +23,19 @@
 
                     <p>Note: Some screenshots of the Cashier Page</p>
                     <div>
-                        <img src="../../../assets/imgs/cashier-alipay.png"/>
+                        <img src="../../../assets/imgs/reference/cashier-alipay.png"/>
                         <p>Cashier Page for Alipay payment service.</p>
                     </div>
                     <div>
-                        <img src="../../../assets/imgs/cashier-wechatpay.png"/>
+                        <img src="../../../assets/imgs/reference/cashier-wechatpay.png"/>
                         <p>Cashier Page for WeChat Pay payment service.</p>
                     </div>
                     <div>
-                        <img src="../../../assets/imgs/cashier-unionpay.png"/>
+                        <img src="../../../assets/imgs/reference/cashier-unionpay.png"/>
                         <p>Cashier Page for UnionPay payment service.</p>
                     </div>
                     <div>
-                        <img src="../../../assets/imgs/cashier-creditcard.png"/>
+                        <img src="../../../assets/imgs/reference/cashier-creditcard.png"/>
                         <p>Cashier Page for credit card payment.</p>
                     </div>
 
@@ -46,12 +46,12 @@
 
                     <h5>Request Parameters</h5>
                     <div>
-                        <img src="../../../assets/imgs/cashier-creditcard.png"/>
+                        <img src="../../../assets/imgs/reference/cashier-creditcard.png"/>
                         <p>Cashier Page for credit card payment.</p>
                     </div>
                     <h5>Response</h5>
                     <div>
-                        <img src="../../../assets/imgs/cashier-creditcard.png"/>
+                        <img src="../../../assets/imgs/reference/cashier-creditcard.png"/>
                         <p>Cashier Page for credit card payment.</p>
                     </div>
                     <h5>result object</h5>
@@ -62,7 +62,7 @@
                     <h5>HTTP Request</h5>
                     <p>POST https://mapi.yuansfer.com/creditpay/v2/update-recurring</p>
                     <div>
-                        <img src="../../../assets/imgs/cashier-creditcard.png"/>
+                        <img src="../../../assets/imgs/reference/cashier-creditcard.png"/>
                         <p>Cashier Page for credit card payment.</p>
                     </div>
                     <h5>Request Parameter</h5>
@@ -70,14 +70,22 @@
                     <h5>HTTP Request</h5>
                 </div>
             </el-col>
-            <el-col :span="7"></el-col>
+            <el-col :span="rightWidth"></el-col>
         </el-row>
     </div>
 </template>
 
 <script>
+    import {COL_WIDTH} from "@/assets/js/common";
+
     export default {
-        name: "onlinePaymentAPI"
+        name: "onlinePaymentAPI",
+        data(){
+            return{
+                leftWidth: COL_WIDTH.left,
+                rightWidth: COL_WIDTH.right,
+            }
+        }
     }
 </script>
 

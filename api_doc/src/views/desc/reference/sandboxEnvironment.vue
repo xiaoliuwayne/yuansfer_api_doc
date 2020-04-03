@@ -10,8 +10,16 @@
 </template>
 
 <script>
+    import {COL_WIDTH} from "@/assets/js/common";
+
     export default {
-        name: "sandboxEnvironment"
+        name: "sandboxEnvironment",
+        data(){
+            return{
+                leftWidth: COL_WIDTH.left,
+                rightWidth: COL_WIDTH.right,
+            }
+        }
     }
 </script>
 

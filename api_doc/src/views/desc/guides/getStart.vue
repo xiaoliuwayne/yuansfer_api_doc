@@ -1,7 +1,7 @@
 <template>
     <div class="enhance">
         <el-row class="row-gb">
-            <el-col :span="17" class="content-gb">
+            <el-col :span="leftWidth" class="content-gb">
                 <div class="desc-area">
                     <h1>Yuansfer Developer Guide</h1>
                     <hr />
@@ -28,7 +28,7 @@
                     <p class="p-font">Use our sandbox to test Yuansfer experience before becoming a Yuansfer merchant or going production.</p>
                 </div>
             </el-col>
-            <el-col :span="7" class="modify">
+            <el-col :span="rightWidth" class="modify">
                 <el-tabs v-model="activeName" @tab-click="handleClick"
                          type="card"
                          class="lang-tabs">
@@ -69,7 +69,7 @@
 </template>
 
 <script>
-    import validateNull from '@/assets/js/common'
+    import {validateNull, COL_WIDTH} from '@/assets/js/common'
     export default {
         name: "getStart",
         data(){
@@ -77,6 +77,8 @@
                 activeName: 'curl',
                 curDialog: false,
                 disabled: false,
+                leftWidth: COL_WIDTH.left,
+                rightWidth: COL_WIDTH.right,
                 // https://onlinecontract.yuansfer.com/contract/storeTestaccount/add?applyName=test2222&applyEmail=2222%40dd.dd&isvFlag=0
                 form: {
                     applyName:'',

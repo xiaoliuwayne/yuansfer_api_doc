@@ -195,158 +195,158 @@
                     <p>PC Web/Alipay Generate QR Code</p>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>1. Customer selects Alipay</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>2. Generate QR Code shows up on Alipay hosted page</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>3.Customer scan with Alipay App</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>4. Customer authenticates payment</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>5. Payment successful</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>6. Redirects customer back to site</p>
                         </el-col>
                     </el-row>
                     <p>PC Web/ login Alipay Wallet Website</p>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>1. Customer selects Alipay</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>2. Customer authenticates payment on Alipay hosted page</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>3. Payment successful</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>4. Redirects customer back to site</p>
                         </el-col>
                     </el-row>
                     <p>PC Web/WeChat Generate Pay QR Code </p>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>1. Customer selects WeChat Pay</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>2. Generate QR Code shows up on Yuansfer hosted page</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>3.Customer scan with WeChat App</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>4. Customer authenticates payment</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>5. Payment successful</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>6. Redirects customer back to site</p>
                         </el-col>
                     </el-row>
                     <p>In-app/redirect Alipay Wallet</p>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>1. Customer selects Alipay</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>2. Review transaction on Alipay App</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>3. Customer authenticates payment</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>4. Payment successful</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p> 5. Redirects customer back to mobile site</p>
                         </el-col>
                     </el-row>
                     <p>WeChat Official Account/WeChat Pay Wallet</p>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>1. Customer selects WeChat Pay</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>2. Review transaction</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>3. Customer authenticates payment</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>4. Payment successful</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p> 5. Redirects customer back to mobile site</p>
                         </el-col>
                     </el-row>
                     <p>PC Web/UnionPay Keyed-in</p>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>1. Customer selects UnionPay </p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>2. Customer enters card number on Yuansfer hosted page</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>3. Customer authenticates payment</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>4. Redirects customer back to site</p>
                         </el-col>
                     </el-row>
@@ -367,31 +367,31 @@
                     <p>PC Web/WeChat Pay Generate QR Code</p>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>1. Customer selects WeChat Pay</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>2. Generate QR Code shows up on PC Web</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>3.Customer scan with WeChat App</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>4. Customer authenticates payment</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>5. Payment successful</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>6. Redirects customer back to site</p>
                         </el-col>
                     </el-row>
@@ -399,27 +399,27 @@
                     <p>In-app/redirect Alipay Wallet</p>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>1. Customer selects Alipay</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>2. Review transaction on Alipay App</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>3. Customer authenticates payment</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>4. Payment successful</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p> 5. Redirects customer back to mobile site</p>
                         </el-col>
                     </el-row>
@@ -427,21 +427,21 @@
                     <p>WeChat Mini Program/WeChat Pay Wallet</p>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>1. Customer checkout with WeChat Pay</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>2. Review transaction on WeChat</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>3. Customer authenticates payment</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>4. Payment successful</p>
                         </el-col>
                     </el-row>
@@ -456,21 +456,21 @@
                     <h5>POS Generate QR Code payment flow:</h5>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>1. Cashier selects WeChat Pay on POS</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>2. Generate QR Code shows up on screen</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>3. Customer scans the QR Code with WeChat App</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>4. Payment successful</p>
                         </el-col>
                     </el-row>
@@ -481,21 +481,21 @@
                     <h5>POS Generate QR Code payment flow:</h5>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>1. Merchant selects Alipay Pay on POS</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>2. Customer presents QR Code</p>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/select_alipay.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/select_alipay.png" alt=""/></div>
                             <p>3. Terminal prompts cashier to scan customer’s QR Code</p>
                         </el-col>
                         <el-col :span="12">
-                            <div><img src="../assets/imgs/generate_qrcode.png" alt=""/></div>
+                            <div><img src="../assets/imgs/reference/generate_qrcode.png" alt=""/></div>
                             <p>4. Payment successful</p>
                         </el-col>
                     </el-row>

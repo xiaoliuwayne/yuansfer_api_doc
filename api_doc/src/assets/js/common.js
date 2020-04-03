@@ -1,3 +1,8 @@
+const COL_WIDTH = {
+    left: 14,
+    right: 10
+}
+
 const validateNull = (rule, value, callback) => {
     if (value === '') {
         callback(new Error('Please input '+ rule.label));
@@ -8,4 +13,4 @@ const validateNull = (rule, value, callback) => {
     }
 };
 
-export default validateNull
+export {validateNull, COL_WIDTH}

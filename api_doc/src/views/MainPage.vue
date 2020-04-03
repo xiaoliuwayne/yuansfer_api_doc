@@ -155,6 +155,11 @@
                             Pay Treasure Sandbox Apk
                         </el-menu-item>
                     </el-submenu>
+                    <div class="line"></div>
+<!--                    <div class="footer">-->
+<!--                        <a>@Yuanex Inc.</a>-->
+<!--                        <a>All Right Reserved</a>-->
+<!--                    </div>-->
                 </el-menu>
             </el-aside>
             <el-main>
@@ -277,6 +282,19 @@
         .el-input{
             width: 83%;
             margin-left: 20px;
+        }
+        .line{
+            min-height: 1px;
+            width: 100%;
+            border-bottom: 1px #ddd dashed;
+            margin-top: 30px;
+        }
+        .footer{
+            background: #42b983;
+            padding-left: 20px;
+            a{
+                font-size: 12px;
+            }
         }
     }
 
