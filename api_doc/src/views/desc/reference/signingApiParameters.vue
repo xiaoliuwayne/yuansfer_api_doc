@@ -2,77 +2,56 @@
     <div>
         <el-row class="row-gb">
             <el-col :span="leftWidth" class="content-gb">
-                <div>
-                    <h3>Signing API parameters</h3>
-                    <p>Signing the API parameters is a feature that allows you to secure your Yuansfer API calls, by using MD5 encryption and authenticated hash.
+                <div class="desc-area">
+                    <h2>Signing API parameters</h2>
+                    <p class="p-font">
+                        Signing the API parameters is a feature that allows you to secure your Yuansfer API calls, by using MD5 encryption and authenticated hash.
                     </p>
-                    <p>
-                        You will need to retrieve your API token from the Yuansfer Dashboard in order to build the parameters of your API calls. API parameters must be
+                    <p class="p-font">
+                        You will need to retrieve your <strong>API token</strong> from the Yuansfer Dashboard in order to build the parameters of your API calls. API parameters must be
                         signed with MD5 encryption.
                     </p>
-
-                    <h4>
+                    <h3>
                         Building the API parameter signature
-                    </h4>
-                    <p>To sign the API parameters, you need to follow these steps:
+                    </h3>
+                    <p class="p-font">
+                        To sign the API parameters, you need to follow these steps:
                     </p>
                     <ol>
-                        <li>Sort the parameters alphabetically according to the parameter name.</li>
-                        <li>Concatenate the parameter names and values using '=' and '&' character.</li>
-                        <li>Append the MD5 hash value of your API token to the end of your parameters with the '&' prefix.
-                        </li>
-                        <li>Calculate the MD5 hash value of the Step 3 result.</li>
+                        <li v-for="(item,index) in steps" :key="index" v-html="item"></li>
                     </ol>
 
-                    <h4>
+                    <h3>
                         EXAMPLE
-                    </h4>
-                    <p>
+                    </h3>
+                    <p class="p-subtitle">
                         Consider the following parameters:
                     </p>
                     <ul>
-                        <li>amount = '1.00'</li>
-                        <li>storeNo = '300014'</li>
-                        <li>currency = 'USD'</li>
-                        <li>merchantNo = '200043'</li>
-                        <li>callbackUrl = 'https://wx.yuansfer.yunkeguan.com/wx'</li>
-                        <li>terminal = 'ONLINE'</li>
-                        <li>ipnUrl = 'https://wx.yuansfer.yunkeguan.com/wx'</li>
-                        <li>reference = 'seq_1525922323'</li>
-                        <li>vendor = 'alipay'</li>
-                        <li>goodsInfo = '[{"goods_name":"Yuansfer","quantity":"1"}]'</li>
-                        <li>timeout = '120'</li>
+                        <li v-for="(item,index) in parameters" :key="index" v-html="'<strong>'+item.name+'</strong>'+item.value"></li>
                     </ul>
-
-                    <p>1. Sort the parameters alphabetically</p>
+                    <h5>1. Sort the parameters alphabetically</h5>
                     <ul>
-                        <li>amount = '1.00'</li>
-                        <li>callbackUrl = 'https://wx.yuansfer.yunkeguan.com/wx'</li>
-                        <li>currency = 'USD'</li>
-                        <li>goodsInfo = '[{"goods_name":"Yuansfer","quantity":"1"}]'</li>
-                        <li>ipnUrl = 'https://wx.yuansfer.yunkeguan.com/wx'</li>
-                        <li>merchantNo = '200043'</li>
-                        <li>reference = 'seq_1525922323'</li>
-                        <li>storeNo = '300014'</li>
-                        <li>terminal = 'ONLINE'</li>
-                        <li>timeout = '120'</li>
-                        <li>vendor = 'alipay'</li>
+                        <li v-for="(item,index) in parametersSort" :key="index" v-html="'<strong>'+item.name+'</strong>'+item.value"></li>
                     </ul>
 
-                    <p>2. Concatenate the parameter names and values using '=' and '&' character</p>
-                    <p>
+                    <h5>2. Concatenate the parameter names and values using '=' and '&' character</h5>
+                    <p class="p-font p-bg">
                         amount=1.00&callbackUrl=https://wx.yuansfer.yunkeguan.com/wx& currency=USD&goodsInfo=[{"goods_name":"Yuansfer","quantity":"1"}]&ipnUrl=https://wx.yuansfer.yunkeguan.com/wx&merchantNo=200043&reference=seq_1525922323&storeNo=300014&terminal=ONLINE&timeout=120&vendor=alipay
                     </p>
 
-                    <p>3. Append MD5 hash value of API token with '&' prefix.</p>
-                    <p>When the API token is 5cbfb079f15b150122261c8537086d77a, the MD5 hash value is 186abea4b8610d7ff03768255588597a.
+                    <h5>3. Append MD5 hash value of API token with '&' prefix.</h5>
+                    <p class="p-font">
+                        When the <strong>API token</strong> is <span class="p-bg">5cbfb079f15b150122261c8537086d77a</span>, the <strong>MD5 hash value</strong> is <span class="p-bg">186abea4b8610d7ff03768255588597a</span>.
                     </p>
-                    <p>So the result string is :</p>
-                    <p>amount=1.00&callbackUrl=https://wx.yuansfer.yunkeguan.com/wx& currency=USD&goodsInfo=[{"goods_name":"Yuansfer","quantity":"1"}]&ipnUrl=https://wx.yuansfer.yunkeguan.com/wx&merchantNo=200043&reference=seq_1525922323&storeNo=300014&terminal=ONLINE&timeout=120&vendor=alipay&186abea4b8610d7ff03768255588597a</p>
-
-
-                    <p>4. Calculate MD5 hash value of Step 3 result string.</p>
-                    <p>MD5 hash value is b6bfd66531ae7c9499115c7480a2c8aa</p>
+                    <p class="p-font">So the <strong>result string</strong> is :</p>
+                    <p class="p-font p-bg">
+                        amount=1.00&callbackUrl=https://wx.yuansfer.yunkeguan.com/wx& currency=USD&goodsInfo=[{"goods_name":"Yuansfer","quantity":"1"}]&ipnUrl=https://wx.yuansfer.yunkeguan.com/wx&merchantNo=200043&reference=seq_1525922323&storeNo=300014&terminal=ONLINE&timeout=120&vendor=alipay&186abea4b8610d7ff03768255588597a
+                    </p>
+                    <h5>4. Calculate MD5 hash value of Step 3 result string.</h5>
+                    <p class="p-font">
+                        <strong>MD5 hash value</strong> is <span class="p-bg">b6bfd66531ae7c9499115c7480a2c8aa</span>
+                    </p>
                 </div>
             </el-col>
             <el-col :span="rightWidth">
@@ -109,6 +88,77 @@
             return{
                 leftWidth: COL_WIDTH.left,
                 rightWidth: COL_WIDTH.right,
+                steps: [
+                    'Sort the parameters alphabetically according to the parameter name.',
+                    "Concatenate the parameter names and values using '=' and '&' character.",
+                    "Append the MD5 hash value of your <strong>API token</strong> to the end of your parameters with the '&' prefix.",
+                    'Calculate the MD5 hash value of the Step 3 result.'
+                ],
+                parameters: [
+                    {
+                        name: 'amount',
+                        value: " = '1.00'",
+                    },
+                    {
+                        name: 'storeNo',
+                        value: " = '300014'",
+                    },
+                    {
+                        name: 'currency',
+                        value: " = 'USD'",
+                    },
+                    {
+                        name: 'merchantNo',
+                        value: " = '200043'",
+                    },
+                    {
+                        name: 'callbackUrl',
+                        value: " = 'https://wx.yuansfer.yunkeguan.com/wx'",
+                    },
+                    {
+                        name: 'terminal',
+                        value: " = 'ONLINE'",
+                    },
+                    {
+                        name: 'ipnUrl',
+                        value: " = 'https://wx.yuansfer.yunkeguan.com/wx'",
+                    },
+                    {
+                        name: 'reference',
+                        value: " = 'seq_1525922323'",
+                    },
+                    {
+                        name: 'vendor',
+                        value: " = 'alipay'",
+                    },
+                    {
+                        name: 'goodsInfo',
+                        value: " = '[{\"goods_name\":\"Yuansfer\",\"quantity\":\"1\"}]'",
+                    },
+                    {
+                        name: 'timeout',
+                        value: " = '120'",
+                    }
+                ]
+            }
+        },
+        computed: {
+            parametersSort: function () {
+                let tmp = []
+                for(let item of this.parameters){
+                    tmp.push(item)
+                }
+                return this.sortByKey(tmp, 'name')
+            }
+        },
+        methods: {
+            sortByKey(ary, key) {
+                return ary.sort(function (a, b) {
+                    let x = a[key]
+                    let y = b[key]
+                    return ((x < y) ? -1 : (x > y) ? 1 : 0)
+                })
+
             }
         }
     }
@@ -116,5 +166,8 @@
 
 <style scoped lang="less">
     @import "../../../assets/css/common.less";
+    h5{
+        font-size: 14px;
+    }
 
 </style>
