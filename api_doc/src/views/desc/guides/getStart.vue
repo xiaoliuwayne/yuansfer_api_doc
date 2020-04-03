@@ -9,22 +9,22 @@
                     <p class="p-font">
                         Learn how to integrate with Yuansfer to accept cross-border payments such as Alipay and WeChat Pay on your eCommerce and in-store Point of Sale System.
                     </p>
-                    <img src="../../../assets/imgs/GetStarted.svg" alt=""/>
+                    <img src="../../../assets/imgs/guides/GetStarted.svg" alt=""/>
 
-                    <h3>Integrate faster with Yuansfer Checkout</h3>
+                    <h3 @click="handleTitleClick('title_yuansfer_checkout')" class="title-curson">Integrate faster with Yuansfer Checkout</h3>
                     <p class="p-font">
                         Redirect your customer to a secure, out-of-the-box solution that is hosted by Yuansfer (or Alipay) with a single integration.
                     </p>
 
                     <h3>Start with your use case</h3>
-                    <a href="https://docs.yuansfer.com/" class="p-a">Accept online payments</a>
+                    <a class="p-a title-curson" @click="handleTitleClick('title_yip')">Accept online payments</a>
                     <p class="p-font">
                         Let your Chinese customers pay with their preferred payment methods on your website, App, or WeChat Mini Program by integrating to Yuansfer Integrated Payments (YIP).
                     </p>
-                    <a href="https://docs.yuansfer.com/" class="p-a">Accept in-store payments</a>
+                    <a class="p-a title-curson" @click="handleTitleClick('title_pos_integration')">Accept in-store payments</a>
                     <p class="p-font">Integrate Yuansfer to your point of sale.</p>
 
-                    <h5 @click="handleSandbox">Sandbox <img class="sandbox-img" src="../../../assets/imgs/link.svg"/></h5>
+                    <h5 @click="handleSandbox">Sandbox <img class="sandbox-img" src="../../../assets/imgs/icon/link.svg"/></h5>
                     <p class="p-font">Use our sandbox to test Yuansfer experience before becoming a Yuansfer merchant or going production.</p>
                 </div>
             </el-col>
@@ -44,7 +44,7 @@
         </el-row>
 
         <el-dialog
-                width="40%"
+                width="30%"
                 :show-close="false"
                 :visible.sync="curDialog">
             <div slot="title">
@@ -69,15 +69,7 @@
 </template>
 
 <script>
-    const validateNull = (rule, value, callback) => {
-        if (value === '') {
-            callback(new Error('Please input '+ rule.label));
-        } else if(rule.label=='Email' && /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,10})$/.test(value)==false){
-            callback(new Error('Please check email format'));
-        } else {
-            callback();
-        }
-    };
+    import validateNull from '@/assets/js/common'
     export default {
         name: "getStart",
         data(){
@@ -121,6 +113,7 @@
         },
         methods: {
             handleClick(){
+                // for tab click
                 this.$emit('func',this.activeName)
             },
             handleSandbox(){
@@ -129,6 +122,15 @@
             submit(){
                 this.disabled = true;
                 this.curDialog = false;
+            },
+            returnTop(id){
+                console.log('id', id)
+                document.querySelector('#'+id).scrollIntoView(true);
+            },
+            handleTitleClick(id){
+                if(id){
+                    this.returnTop(id)
+                }
             }
         }
     }
@@ -186,5 +188,8 @@
     }
     .dialog-btn{
         text-align: left;
+    }
+    .title-curson{
+        cursor: pointer;
     }
 </style>

@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="enhance">
         <el-row class="row-gb">
             <el-col :span="17" class="content-gb">
                 <div class="desc-area">
-                    <h2>Yuansfer Checkout</h2>
+                    <h2 id="title_yuansfer_checkout">Yuansfer Checkout</h2>
                     <p class="p-font">
                         A secure Payment Page hosted by Yuansfer that makes processing Alipay, WeChat Pay, and CUP transactions easier than ever. Yuansfer Checkout can be added to a site or an App in a few hours and easily configured to an existing payment page; this allows merchants to build, market, scale, and internationalize online business quickly.
                     </p>
@@ -51,7 +51,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <img src="../../../assets/imgs/tanhao.png" alt=""/>
+                                    <img src="../../../assets/imgs/icon/tanhao.png" alt=""/>
                                 </td>
                                 <td>
                                     <div>
@@ -65,11 +65,11 @@
                         <table>
                             <tr>
                                 <td class="one-line-1td">
-                                    <img src="../../../assets/imgs/tanhao.png" alt=""/>
+                                    <img src="../../../assets/imgs/icon/tanhao.png" alt=""/>
                                 </td>
                                 <td class="one-line-2td">
                                     <div>
-                                        Contact <span>Yuansfer Support</span> to also accept Visa, Mastercard, Discover, and Amex on Yuansfer Checkout.
+                                        Contact <span @click="handleContact">Yuansfer Support</span> to also accept Visa, Mastercard, Discover, and Amex on Yuansfer Checkout.
                                     </div>
                                 </td>
                             </tr>
@@ -140,14 +140,63 @@
             </el-col>
             <el-col :span="7"></el-col>
         </el-row>
+        <el-dialog
+                width="30%"
+                :show-close="false"
+                class="dialog-contact"
+                :visible.sync="curDialog">
+            <div slot="title">
+                <label class="dialog-title">Contact</label>
+            </div>
+            <el-form :model="form" :rules="rules" ref="form">
+                <el-row>
+                    <el-col :span="12">
+                        <img src="../../../assets/imgs/icon/Icon@2x.png" alt=""/>
+                        <span>(855) 982-6888</span>
+                    </el-col>
+                    <el-col :span="12">
+                        <img src="../../../assets/imgs/icon/Email@2x.png" alt=""/>
+                        <span>support@Yuansfer.com</span>
+                    </el-col>
+                </el-row>
+                <el-form-item label="" prop="name" class="">
+                    <el-input v-model.trim="form.name"
+                              placeholder="Name"
+                              auto-complete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="" prop="email">
+                    <el-input v-model.trim="form.email"
+                              placeholder="Email"
+                              auto-complete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="" prop="message">
+                    <el-input v-model.trim="form.message"
+                              type="textarea"
+                              :autosize="{ minRows: 3, maxRows: 4}"
+                              placeholder="Message"
+                              auto-complete="off"></el-input>
+                </el-form-item>
+            </el-form>
+            <div slot="footer" class="dialog-btn">
+                <el-button type="primary" @click="submit" :disabled="disabled">Send</el-button>
+            </div>
+        </el-dialog>
     </div>
 </template>
 
 <script>
+    import validateNull from '@/assets/js/common'
     export default {
         name: "yuansferCheckout",
         data(){
             return{
+                curDialog: false,
+                disabled: false,
+                form: {
+                    name: '',
+                    email: '',
+                    message: ''
+                },
                 pcAlipayQRcode: [
                     [
                         {
@@ -322,6 +371,32 @@
                         }
                     ],
                 ],
+                rules:{
+                    name: [
+                        { validator: validateNull, trigger: 'blur', label: 'Name'}
+                    ],
+                    email: [
+                        { validator: validateNull, trigger: 'blur', label: 'Email'},
+                    ],
+                    message: [
+                        { validator: validateNull, trigger: 'blur', label: 'Message'},
+                    ],
+                }
+            }
+        },
+        watch:{
+            curDialog:{
+                handler: function (curVal, oldVal) {
+                    console.log(curVal, oldVal);
+                    if(!curVal){
+                        this.form = {
+                            name: '',
+                            email: '',
+                            message: ''
+                        };
+                        this.disabled = false;
+                    }
+                }
             }
         },
         methods: {
@@ -333,6 +408,13 @@
                 if(id){
                     this.returnTop(id)
                 }
+            },
+            handleContact(){
+                this.curDialog = true;
+            },
+            submit(){
+                this.disabled = true;
+                this.curDialog = false;
             }
         }
     }
@@ -340,4 +422,29 @@
 
 <style scoped lang="less">
     @import "../../../assets/css/common.less";
+    .dialog-title{
+        font-size: 24px;
+        color: #000;
+        font-weight: bold;
+    }
+    .dialog-contact{
+        img{
+            width: 14px;
+        }
+        .el-row{
+            margin-bottom: 25px;
+        }
+        .dialog-btn{
+            text-align: left;
+        }
+        .el-input{
+            width: 80%;
+        }
+        .el-textarea{
+            width: 80%;
+        }
+    }
+    .enhance /deep/ .el-dialog__body{
+        padding: 5px 20px;
+    }
 </style>

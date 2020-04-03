@@ -182,10 +182,10 @@
                     <h3 id="g_2">Yuansfer Checkout</h3>
                     <p>A secure Payment Page hosted by Yuansfer that makes processing Alipay, WeChat Pay, and CUP transactions easier than ever. Yuansfer Checkout can be added to a site or an App in a few hours and easily configured to an existing payment page; this allows merchants to build, market, scale, and internationalize online business quickly.</p>
                     <img src="../assets/imgs/yuansferCheckout_table.png" alt=""/>
-                    <div><img src="../assets/imgs/tanhao.png" alt=""/>
+                    <div><img src="../assets/imgs/icon/tanhao.png" alt=""/>
                         <span>Yuansfer Checkout is best use on a PC Web, since scanning a Generate QR Code with WeChat App on the same mobile device requires extra steps. It is recommended that you use YIP for In-App integration. </span>
                     </div>
-                    <div><img src="../assets/imgs/tanhao.png" alt=""/>
+                    <div><img src="../assets/imgs/icon/tanhao.png" alt=""/>
                         <span>Contact <a href="https://www.yuansfer.com">Yuansfer Support</a> to also accept Visa, Mastercard, Discover, and Amex on Yuansfer Checkout.</span></div>
 
                     <h4>How It Works</h4>
@@ -354,10 +354,10 @@
                     <h3 id="g_3">Yuansfer Integrated Payments (YIP)</h3>
                     <p>Optimized for mobile apps and WeChat Mini Program, YIP is a secure integration path that renders Alipay, WeChat Pay, and Union Pay in your own payment form.</p>
                     <img src="../assets/imgs/yip_table.png"/>
-                    <div><img src="../assets/imgs/tanhao.png" alt=""/>
+                    <div><img src="../assets/imgs/icon/tanhao.png" alt=""/>
                         <span><a href="https://www.yuansfer.com">Yuansfer Checkout</a> is the only available integration option to enable Alipay on Web platforms.</span>
                     </div>
-                    <div><img src="../assets/imgs/tanhao.png" alt=""/>
+                    <div><img src="../assets/imgs/icon/tanhao.png" alt=""/>
                         <span>Contact <a href="https://www.yuansfer.com">Yuansfer Tech Support</a>  to enable Alipay and WeChat Pay using Yuansfer mobile SDKs.
                     </span></div>
                     <h4>How It Works</h4>

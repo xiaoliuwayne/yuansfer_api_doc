@@ -3,7 +3,7 @@
         <el-row class="row-gb">
             <el-col :span="17" class="content-gb">
                 <div class="desc-area">
-                    <h2>POS Integration</h2>
+                    <h2 id="title_pos_integration">POS Integration</h2>
                     <p class="p-font">
                         Integrate Alipay and WeChat Pay in your point of sale via Yuansfer API or an SDK; enabling you to seamlessly accept Chinese customer’s preferred home payment method in-store. There are two integration options you can use to initiate Alipay and WeChat Pay depending on your need.
                     </p>

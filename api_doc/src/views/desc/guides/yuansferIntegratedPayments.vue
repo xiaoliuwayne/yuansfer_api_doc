@@ -3,7 +3,7 @@
         <el-row class="row-gb">
             <el-col :span="17" class="content-gb">
                 <div class="desc-area">
-                    <h2>Yuansfer Integrated Payments (YIP)</h2>
+                    <h2 id="title_yip">Yuansfer Integrated Payments (YIP)</h2>
                     <p class="p-font">
                         Optimized for mobile apps and WeChat Mini Program, YIP is a secure integration path that renders Alipay, WeChat Pay, and Union Pay in your own payment form.
                     </p>
@@ -20,7 +20,7 @@
                             <td>PC Web</td>
                             <td>N/A</td>
                             <td><span @click="handleCellClick('yip_pcWechatpayQRcode')">Generate QR Code</span></td>
-                            <td><span>Keyed-in</span></td>
+                            <td>Keyed-in</td>
                         </tr>
                         <tr>
                             <td>Mobile Web</td>
@@ -46,11 +46,11 @@
                         <table>
                             <tr>
                                 <td class="one-line-1td">
-                                    <img src="../../../assets/imgs/tanhao.png" alt=""/>
+                                    <img src="../../../assets/imgs/icon/tanhao.png" alt=""/>
                                 </td>
                                 <td class="one-line-2td">
                                     <div>
-                                        <span>Yuansfer Checkout</span> is the only available integration option to enable Alipay on Web platforms.
+                                        <span @click="handleCellClick('title_yuansfer_checkout')">Yuansfer Checkout</span> is the only available integration option to enable Alipay on Web platforms.
                                     </div>
                                 </td>
                             </tr>
@@ -61,7 +61,7 @@
                         <table>
                             <tr>
                                 <td class="one-line-1td">
-                                    <img src="../../../assets/imgs/tanhao.png" alt=""/>
+                                    <img src="../../../assets/imgs/icon/tanhao.png" alt=""/>
                                 </td>
                                 <td class="one-line-2td">
                                     <div>
