@@ -19,7 +19,7 @@
                         <tr>
                             <td>PC Web</td>
                             <td>N/A</td>
-                            <td><span>Generate QR Code</span></td>
+                            <td><span @click="handleCellClick('yip_pcWechatpayQRcode')">Generate QR Code</span></td>
                             <td><span>Keyed-in</span></td>
                         </tr>
                         <tr>
@@ -30,14 +30,14 @@
                         </tr>
                         <tr>
                             <td>In-App</td>
-                            <td><span>Redirect Alipay Wallet</span></td>
+                            <td><span @click="handleCellClick('yip_appAlipayWallet')">Redirect Alipay Wallet</span></td>
                             <td>Redirect WeChat Wallet</td>
                             <td>Keyed-in</td>
                         </tr>
                         <tr>
                             <td>WeChat Mini Program</td>
                             <td>N/A</td>
-                            <td><span>WeChat Wallet</span></td>
+                            <td><span @click="handleCellClick('yip_miniProgramWechatpay')">WeChat Wallet</span></td>
                             <td>N/A</td>
                         </tr>
                     </table>
@@ -79,7 +79,7 @@
 
                     <h4>YIP payment flows:</h4>
                     <div class="step-img">
-                        <p class="p-subtitle">PC Web/WeChat Pay Generate QR Code</p>
+                        <p class="p-subtitle" id="yip_pcWechatpayQRcode">PC Web/WeChat Pay Generate QR Code</p>
                         <el-row v-for="(rowData,index) in pcWechatpayQRcode" :key="index">
                             <el-col :span="12" v-for="colData in rowData" :key="colData.index">
                                 <div><img :src="colData.img" alt=""/></div>
@@ -89,7 +89,7 @@
                     </div>
 
                     <div class="step-img">
-                        <p class="p-subtitle">In-app/redirect Alipay Wallet</p>
+                        <p class="p-subtitle" id="yip_appAlipayWallet">In-app/redirect Alipay Wallet</p>
                         <el-row v-for="(rowData,index) in appAlipayWallet" :key="index">
                             <el-col :span="12" v-for="colData in rowData" :key="colData.index">
                                 <div><img :src="colData.img" alt=""/></div>
@@ -99,7 +99,7 @@
                     </div>
 
                     <div class="step-img">
-                        <p class="p-subtitle">WeChat Mini Program/WeChat Pay Wallet</p>
+                        <p class="p-subtitle" id="yip_miniProgramWechatpay">WeChat Mini Program/WeChat Pay Wallet</p>
                         <el-row v-for="(rowData,index) in miniProgramWechatpay" :key="index">
                             <el-col :span="12" v-for="colData in rowData" :key="colData.index">
                                 <div><img :src="colData.img" alt=""/></div>
@@ -206,6 +206,17 @@
                         },
                     ],
                 ],
+            }
+        },
+        methods: {
+            returnTop(id){
+                console.log('id', id)
+                document.querySelector('#'+id).scrollIntoView(true);
+            },
+            handleCellClick(id){
+                if(id){
+                    this.returnTop(id)
+                }
             }
         }
     }

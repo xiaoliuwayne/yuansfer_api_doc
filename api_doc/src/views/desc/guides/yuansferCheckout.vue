@@ -17,10 +17,15 @@
                             <th style="width: 72px">CUP</th>
                         </tr>
                         <tr>
-                            <td><span>PC Web</span></td>
-                            <td><span>Generate QR Code Login Alipay Wallet website</span></td>
-                            <td><span>Generate QR Code</span></td>
-                            <td><span>Keyed-in</span></td>
+                            <td>
+                               PC Web
+                            </td>
+                            <td>
+                                <span @click="handleCellClick('yuansfer_checkout_pcalipayqrcode')" style="display: inline-block">Generate QR Code</span>
+                                <span @click="handleCellClick('yuansfer_checkout_pcAlipayWallet')" style="display: inline-block">Login Alipay Wallet website</span>
+                            </td>
+                            <td><span @click="handleCellClick('yuansfer_checkout_pcWechatpayQRcode')">Generate QR Code</span></td>
+                            <td><span @click="handleCellClick('yuansfer_checkout_pcUnionpayKeyin')">Keyed-in</span></td>
                         </tr>
                         <tr>
                             <td>Mobile Web</td>
@@ -30,14 +35,14 @@
                         </tr>
                         <tr>
                             <td>In-App</td>
-                            <td><span>Redirect Alipay Wallet</span></td>
+                            <td><span @click="handleCellClick('yuansfer_checkout_appAlipayWallet')">Redirect Alipay Wallet</span></td>
                             <td>Generate QR Code</td>
                             <td>Keyed-in</td>
                         </tr>
                         <tr>
                             <td>WeChat Official Account</td>
                             <td>N/A</td>
-                            <td><span>WeChat Wallet</span></td>
+                            <td><span @click="handleCellClick('yuansfer_checkout_pcWechatpayWallet')">WeChat Wallet</span></td>
                             <td>Keyed-in</td>
                         </tr>
                     </table>
@@ -78,7 +83,7 @@
 
                     <h4>Yuansfer Checkout payment flow:</h4>
                     <div class="step-img">
-                        <p class="p-subtitle">PC Web/Alipay Generate QR Code</p>
+                        <p class="p-subtitle" id="yuansfer_checkout_pcalipayqrcode">PC Web/Alipay Generate QR Code</p>
                         <el-row v-for="(rowData,index) in pcAlipayQRcode" :key="index">
                             <el-col :span="12" v-for="colData in rowData" :key="colData.index">
                                 <div><img :src="colData.img" alt=""/></div>
@@ -87,7 +92,7 @@
                         </el-row>
                     </div>
                     <div class="step-img">
-                        <p class="p-subtitle">PC Web/ login Alipay Wallet Website</p>
+                        <p class="p-subtitle" id="yuansfer_checkout_pcAlipayWallet">PC Web/ login Alipay Wallet Website</p>
                         <el-row v-for="(rowData,index) in pcAlipayWallet" :key="index">
                             <el-col :span="12" v-for="colData in rowData" :key="colData.index">
                                 <div><img :src="colData.img" alt=""/></div>
@@ -96,7 +101,7 @@
                         </el-row>
                     </div>
                     <div class="step-img">
-                        <p class="p-subtitle">PC Web/WeChat Generate Pay QR Code</p>
+                        <p class="p-subtitle" id="yuansfer_checkout_pcWechatpayQRcode">PC Web/WeChat Generate Pay QR Code</p>
                         <el-row v-for="(rowData,index) in pcWechatpayQRcode" :key="index">
                             <el-col :span="12" v-for="colData in rowData" :key="colData.index">
                                 <div><img :src="colData.img" alt=""/></div>
@@ -105,7 +110,7 @@
                         </el-row>
                     </div>
                     <div class="step-img">
-                        <p class="p-subtitle">In-app/redirect Alipay Wallet</p>
+                        <p class="p-subtitle" id="yuansfer_checkout_appAlipayWallet">In-app/redirect Alipay Wallet</p>
                         <el-row v-for="(rowData,index) in appAlipayWallet" :key="index">
                             <el-col :span="12" v-for="colData in rowData" :key="colData.index">
                                 <div><img :src="colData.img" alt=""/></div>
@@ -114,7 +119,7 @@
                         </el-row>
                     </div>
                     <div class="step-img">
-                        <p class="p-subtitle">WeChat Official Account/WeChat Pay Wallet</p>
+                        <p class="p-subtitle" id="yuansfer_checkout_pcWechatpayWallet">WeChat Official Account/WeChat Pay Wallet</p>
                         <el-row v-for="(rowData,index) in pcWechatpayWallet" :key="index">
                             <el-col :span="12" v-for="colData in rowData" :key="colData.index">
                                 <div><img :src="colData.img" alt=""/></div>
@@ -123,7 +128,7 @@
                         </el-row>
                     </div>
                     <div class="step-img">
-                        <p class="p-subtitle">PC Web/UnionPay Keyed-in</p>
+                        <p class="p-subtitle" id="yuansfer_checkout_pcUnionpayKeyin">PC Web/UnionPay Keyed-in</p>
                         <el-row v-for="(rowData,index) in pcUnionpayKeyin" :key="index">
                             <el-col :span="12" v-for="colData in rowData" :key="colData.index">
                                 <div><img :src="colData.img" alt=""/></div>
@@ -131,7 +136,6 @@
                             </el-col>
                         </el-row>
                     </div>
-
                 </div>
             </el-col>
             <el-col :span="7"></el-col>
@@ -318,6 +322,17 @@
                         }
                     ],
                 ],
+            }
+        },
+        methods: {
+            returnTop(id){
+                console.log('id', id)
+                document.querySelector('#'+id).scrollIntoView(true);
+            },
+            handleCellClick(id){
+                if(id){
+                    this.returnTop(id)
+                }
             }
         }
     }
