@@ -2,94 +2,98 @@
     <div>
         <el-row class="row-gb">
             <el-col :span="leftWidth" class="content-gb">
-                <div>
-                    <h3>Online Payments API</h3>
-                    <p>Use the Online Payments API to easily and securely accept online payments. The Yuansfer secure payment interface provides online payment services, including China UnionPay, Alipay and WeChat Pay and credit card.
+                <div class="desc-area">
+                    <h2>Online Payments API</h2>
+                    <p class="p-font">
+                        Use the Online Payments API to easily and securely accept online payments. The Yuansfer secure payment interface provides online payment services, including China UnionPay, Alipay and WeChat Pay and credit card.
                     </p>
-                    <h5>Online payment workflow</h5>
-                    <img src="../../../assets/imgs/reference/sflow-en.png" alt=""/>
+                    <h3>Online payment workflow</h3>
+                    <div class="single-img">
+                        <img src="../../../assets/imgs/reference/yuansferCheckout/flow.jpg" alt=""/>
+                    </div>
                     <ol>
-                        <li>The Merchant's system submits the order to the Yuansfer system when a customer places an order.</li>
-                        <li>The Yuansfer system checks if the request is valid.</li>
-                        <li>
-                            The Yuansfer system leads the customer to the Cashier Page to check out. The Cashier Page displays a different payment method depending on the selected payment service.
-                        </li>
-                        <li>
-                            The customer confirms payment on Cashier Page.
-                        </li>
-                        <li>The Yuansfer system sends the payment result to the Merchant's system.</li>
-                        <li>The Merchant's system shows the payment result to the customer.</li>
+                        <li v-for="(item,index) in orderList" :key="index">{{item}}</li>
                     </ol>
 
-                    <p>Note: Some screenshots of the Cashier Page</p>
-                    <div>
-                        <img src="../../../assets/imgs/reference/cashier-alipay.png"/>
-                        <p>Cashier Page for Alipay payment service.</p>
+                    <p class="p-font"><strong>Note</strong>: Some screenshots of the <strong>Cashier Page</strong></p>
+                    <div class="single-img" v-for="(item,index) in cashierScreenshot" :key="index">
+                        <img :src="item.img" alt=""/>
+                        <p class="p-font" v-html="item.desc"></p>
                     </div>
-                    <div>
-                        <img src="../../../assets/imgs/reference/cashier-wechatpay.png"/>
-                        <p>Cashier Page for WeChat Pay payment service.</p>
-                    </div>
-                    <div>
-                        <img src="../../../assets/imgs/reference/cashier-unionpay.png"/>
-                        <p>Cashier Page for UnionPay payment service.</p>
-                    </div>
-                    <div>
-                        <img src="../../../assets/imgs/reference/cashier-creditcard.png"/>
-                        <p>Cashier Page for credit card payment.</p>
-                    </div>
-
-                    <h4 id="r_3_1">secure-pay()</h4>
-                    <p>Use the secure-pay() API to pay for an order.</p>
-                    <h5>HTTP Request</h5>
-                    <p>POST https://mapi.yuansfer.com/online/v2/secure-pay</p>
-
-                    <h5>Request Parameters</h5>
-                    <div>
-                        <img src="../../../assets/imgs/reference/cashier-creditcard.png"/>
-                        <p>Cashier Page for credit card payment.</p>
-                    </div>
-                    <h5>Response</h5>
-                    <div>
-                        <img src="../../../assets/imgs/reference/cashier-creditcard.png"/>
-                        <p>Cashier Page for credit card payment.</p>
-                    </div>
-                    <h5>result object</h5>
-
-
-                    <h4 id="r_3_2">update-recurring()</h4>
-                    <p>You can use the update-recurring() API modify automatic deduction rules.</p>
-                    <h5>HTTP Request</h5>
-                    <p>POST https://mapi.yuansfer.com/creditpay/v2/update-recurring</p>
-                    <div>
-                        <img src="../../../assets/imgs/reference/cashier-creditcard.png"/>
-                        <p>Cashier Page for credit card payment.</p>
-                    </div>
-                    <h5>Request Parameter</h5>
-
-                    <h5>HTTP Request</h5>
+                    <hr/>
                 </div>
             </el-col>
             <el-col :span="rightWidth"></el-col>
         </el-row>
+        <secure-pay></secure-pay>
+        <update-recurring></update-recurring>
     </div>
 </template>
 
 <script>
     import {COL_WIDTH} from "@/assets/js/common";
+    import SecurePay from "@/views/desc/reference/yuansferCheckout/securePay"
+    import UpdateRecurring from "@/views/desc/reference/yuansferCheckout/updateRecurring"
 
     export default {
         name: "onlinePaymentAPI",
+        components: {
+            SecurePay,
+            UpdateRecurring
+        },
         data(){
             return{
                 leftWidth: COL_WIDTH.left,
                 rightWidth: COL_WIDTH.right,
+                orderList: [
+                    "The Merchant's system submits the order to the Yuansfer system when a customer places an order.",
+                    "The Yuansfer system leads the customer to the Cashier Page to check out. The Cashier Page displays a different payment method depending on the selected payment service.",
+                    "The customer confirms payment on Cashier Page.",
+                    "The Yuansfer system sends the payment result to the Merchant's system.",
+                    "The Merchant's system shows the payment result to the customer.",
+                ],
+                cashierScreenshot: [
+                    {
+                        img: require('../../../assets/imgs/reference/yuansferCheckout/cashier-alipay.png'),
+                        desc:'<strong>Cashier Page</strong> for Alipay payment service.'
+                    },
+                    {
+                        img: require('../../../assets/imgs/reference/yuansferCheckout/cashier-wechatpay.png'),
+                        desc:'<strong>Cashier Page</strong>  for WeChat Pay payment service.'
+                    },
+                    {
+                        img: require('../../../assets/imgs/reference/yuansferCheckout/cashier-unionpay.png'),
+                        desc:'<strong>Cashier Page</strong>  for UnionPay payment service.'
+                    },
+                    {
+                        img: require('../../../assets/imgs/reference/yuansferCheckout/cashier-creditcard.png'),
+                        desc:'<strong>Cashier Page</strong>  for credit card payment.'
+                    }
+                ],
             }
-        }
+        },
+        mounted(){},
+        methods:{}
     }
 </script>
 
 <style scoped lang="less">
     @import "../../../assets/css/common.less";
+    .desc-area{
+        .single-img{
+            img{
+                width: 100%;
+            }
+            p{
+                text-align: center;
+            }
+        }
+        hr{
+            margin-top: 60px;
+        }
+        h3{
+            font-weight: bold;
+        }
+    }
 
 </style>

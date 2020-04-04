@@ -32,3 +32,10 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+##Note!
+```
+online payments api ==> yuansfer checkout;
+in-store payments api ==> yuansfer integrated payment(YIP);
+mobile application payments api ==> point of sale integration api
+```

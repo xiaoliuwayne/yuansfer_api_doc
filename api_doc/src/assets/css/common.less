@@ -148,3 +148,45 @@ li{
   color: #3C414D;
   padding: 5px 0;
 }
+
+.param-table{
+  table{
+    width: 100%;
+    th{
+      color: #3C414D;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: left;
+      border-top: rgba(71,162,255,0.3) 1px solid;
+      border-bottom: rgba(71,162,255,0.3) 1px solid;
+      border-right: none;
+      padding: 15px 0;
+      background: #fff;
+    }
+    td{
+      color: #3C414D;
+      font-size: 14px;
+      text-align: left;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: rgba(71,162,255,0.3) 1px solid;
+      padding: 8px 0;
+      .param-desc /deep/ .p-bg{
+        background: rgba(0,0,0,0.1);
+      }
+      .param-desc /deep/ .jump-method{
+        color: #47A2FF;
+        cursor: pointer;
+      }
+    }
+  }
+  .redColor{
+    color: #ff7755;
+    font-size: 12px;
+  }
+  .normalColor{
+    color: #888;
+    font-size: 12px;
+  }
+}

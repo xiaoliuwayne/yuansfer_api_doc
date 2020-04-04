@@ -3,6 +3,21 @@ const COL_WIDTH = {
     right: 10
 }
 
+const TABLE_COL = [
+    {
+        label: 'Parameter',
+        curWidth: '20%'
+    },
+    {
+        label: 'Type',
+        curWidth: '10%'
+    },
+    {
+        label: 'Description',
+        curWidth: '70%'
+    },
+]
+
 const validateNull = (rule, value, callback) => {
     if (value === '') {
         callback(new Error('Please input '+ rule.label));
@@ -13,4 +28,4 @@ const validateNull = (rule, value, callback) => {
     }
 };
 
-export {validateNull, COL_WIDTH}
+export {validateNull, COL_WIDTH, TABLE_COL}
