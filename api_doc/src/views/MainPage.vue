@@ -173,7 +173,7 @@
 <!--                    api reference-->
                     <welcome id="r_1"></welcome>
                     <signing-api-parameters id="r_2" :curTab="activeName"></signing-api-parameters>
-                    <online-payment-api id="r_3"></online-payment-api>
+                    <online-payment-api id="r_3" :curTab="activeName"></online-payment-api>
                 </div></el-col>
             </el-row>
             </el-main>
@@ -220,11 +220,15 @@
                 if(index){
                     this.returnTop(index)
                 }
-                if(index=='r_3_1'){
-                    // index
-                    let top = document.querySelector('#'+index).offsetTop
-                    document.querySelector('#r_3_1_c').offsetTop = top
-                }
+                // if(index=='r_3_1'){
+                //     // index
+                //     if(document.querySelector('#'+index)){
+                //         let top = document.querySelector('#'+index).offsetTop
+                //         if(document.querySelector('#'+index+'_c')){ // _c means code id for current menu id(index)
+                //             document.querySelector('#'+index+'_c').offsetTop = top
+                //         }
+                //     }
+                // }
             },
             handleOpen(key, keyPath) {
                 // open menu that have submenu

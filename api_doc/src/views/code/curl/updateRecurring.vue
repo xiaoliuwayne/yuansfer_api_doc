@@ -15,32 +15,23 @@
 
 <script>
     export default {
-        name: "securePay",
+        name: "updateRecurring",
         data(){
             return{
                 showCode: {
-                    httpRequest: 'POST https://mapi.yuansfer.com/online/v2/secure-pay',
+                    httpRequest: 'POST https://mapi.yuansfer.com/creditpay/v2/update-recurring',
                     exampleRequest: `
-        curl "https://mapi.yuansfer.com/online/v2/secure-pay" \\
-        -d amount="1.00" \\
+        curl "https://mapi.yuansfer.com/creditpay/v2/update-recurring" \\
+        -d scheduleNo="123123" \\
         -d storeNo="300014" \\
         -d currency="USD" \\
         -d merchantNo="200043" \\
-        -d callbackUrl="https://wx.yuansfer.yunkeguan.com/wx" \\
-        -d terminal="ONLINE" \\
-        -d ipnUrl="https://wx.yuansfer.yunkeguan.com/wx" \\
-        -d reference="seq_1525922323" \\
-        -d vendor="alipay" \\
-        -d verifySign="4f0cc35728849e4b4aa4a176f4a5edac"`,
+        -d paymentCount="12"\\
+        -d frequency="1"\\
+        -d verifySign="4f0cc35728849e4b4aa4a176f4a5edac"\\`,
                     exampleResponse: `
         {
-            "result":{
-                "amount": "0.01",
-                "reference": "44444",
-                "transactionNo": "297245675773319174",
-                "cashierUrl": "https://*****"
-            },
-            "ret_msg": "prepay success ",
+            "ret_msg": "update success ",
             "ret_code": "000100"
         }`
                 },

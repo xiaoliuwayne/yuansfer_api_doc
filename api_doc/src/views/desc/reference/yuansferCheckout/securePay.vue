@@ -68,16 +68,42 @@
                     <hr/>
                 </div>
             </el-col>
-            <el-col :span="rightWidth"></el-col>
+            <el-col :span="rightWidth">
+                <div class="show-code">
+<!--                    <secure-pay-code :curTab="curTab"></secure-pay-code>-->
+                    <secure-pay-curl v-show="curTab=='curl'"></secure-pay-curl>
+                    <secure-pay-php v-show="curTab=='php'"></secure-pay-php>
+                    <secure-pay-java v-show="curTab=='java'"></secure-pay-java>
+                    <secure-pay-go v-show="curTab=='go'"></secure-pay-go>
+                </div>
+            </el-col>
         </el-row>
     </div>
 </template>
 
 <script>
     import {COL_WIDTH, TABLE_COL} from "@/assets/js/common";
+    import SecurePayCurl from '@/views/code/curl/securePay'
+    import SecurePayPhp from '@/views/code/php/securePay'
+    import SecurePayJava from '@/views/code/java/securePay'
+    import SecurePayGo from '@/views/code/go/securePay'
+    // import SecurePayCode from '@/views/code/common/securePay'
 
     export default {
         name: "securePay",
+        components: {
+            SecurePayCurl,
+            SecurePayPhp,
+            SecurePayJava,
+            SecurePayGo,
+            // SecurePayCode
+        },
+        props:{
+            curTab: {
+                type: String,
+                default: '',
+            }
+        },
         data(){
             return{
                 leftWidth: COL_WIDTH.left,

@@ -162,7 +162,7 @@
         background: #0D0D1E;
         position: fixed;
         z-index: 1;
-        width: 33%;
+        width: 100%;
     }
     img{
         padding-top: 30px;

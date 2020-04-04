@@ -13,6 +13,7 @@
                              POST https://mapi.yuansfer.com/creditpay/v2/update-recurring
                         </span>
                     </p>
+
                     <div v-for="(item,index) in showTableData" :key="index">
                         <h4>{{item.title}}</h4>
                         <div class="param-table">
@@ -34,16 +35,39 @@
                     </div>
                 </div>
             </el-col>
-            <el-col :span="rightWidth"></el-col>
+            <el-col :span="rightWidth">
+                <div class="show-code">
+                    <update-recurring-curl v-show="curTab=='curl'"></update-recurring-curl>
+                    <update-recurring-php v-show="curTab=='php'"></update-recurring-php>
+                    <update-recurring-java v-show="curTab=='java'"></update-recurring-java>
+                    <update-recurring-go v-show="curTab=='go'"></update-recurring-go>
+                </div>
+            </el-col>
         </el-row>
     </div>
 </template>
 
 <script>
     import {COL_WIDTH, TABLE_COL} from "@/assets/js/common";
+    import UpdateRecurringCurl from '@/views/code/curl/updateRecurring'
+    import UpdateRecurringPhp from '@/views/code/php/updateRecurring'
+    import UpdateRecurringJava from '@/views/code/java/updateRecurring'
+    import UpdateRecurringGo from '@/views/code/go/updateRecurring'
 
     export default {
         name: "updateRecurring",
+        components: {
+            UpdateRecurringCurl,
+            UpdateRecurringPhp,
+            UpdateRecurringJava,
+            UpdateRecurringGo
+        },
+        props:{
+            curTab: {
+                type: String,
+                default: '',
+            }
+        },
         data(){
             return{
                 leftWidth: COL_WIDTH.left,

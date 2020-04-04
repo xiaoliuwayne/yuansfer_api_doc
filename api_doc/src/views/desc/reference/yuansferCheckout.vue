@@ -25,8 +25,8 @@
             </el-col>
             <el-col :span="rightWidth"></el-col>
         </el-row>
-        <secure-pay></secure-pay>
-        <update-recurring></update-recurring>
+        <secure-pay :curTab="curTab"></secure-pay>
+        <update-recurring :curTab="curTab"></update-recurring>
     </div>
 </template>
 
@@ -40,6 +40,12 @@
         components: {
             SecurePay,
             UpdateRecurring
+        },
+        props:{
+            curTab: {
+                type: String,
+                default: '',
+            }
         },
         data(){
             return{
@@ -72,8 +78,9 @@
                 ],
             }
         },
+        watch: {},
         mounted(){},
-        methods:{}
+        methods: {}
     }
 </script>
 
